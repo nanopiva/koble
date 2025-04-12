@@ -1,0 +1,47 @@
+/* Botón WhatsApp con SVG */
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.whatsappButton:hover {
+  background-color: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícono SVG */
+.whatsappIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.whatsappButton:hover .whatsappIcon {
+  transform: scale(1.15);
+}
+
+/* Versión mobile */
+@media (max-width: 768px) {
+  .whatsappButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .whatsappIcon {
+    width: 18px;
+    height: 18px;
+  }
+}

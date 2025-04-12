@@ -1,0 +1,292 @@
+/* styles/Footer.module.css */
+.footer {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 2.5rem 0 0;
+  position: relative;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+[data-theme="light"] .footer {
+  border-top: 0.2px solid rgba(0, 119, 182, 0.2);
+}
+
+/* Línea decorativa superior */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--bg-primary), var(--bg-secondary));
+  opacity: 0.7;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: start;
+}
+
+/* Sección Brand */
+.brandSection {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.logo {
+  display: inline-block;
+  width: 180px;
+}
+.logoContainer {
+  padding-top: 0;
+}
+
+.logoImage {
+  object-fit: contain;
+  transition: filter 0.25s ease;
+}
+
+.logoImage:hover {
+  filter: brightness(1.2) drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+
+[data-theme="light"] .logoImage:hover {
+  filter: brightness(1.2) drop-shadow(0 0 6px rgba(0, 119, 182, 0.7));
+}
+
+.taglineWrapper {
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--accent-primary);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.tagline {
+  color: var(--text-primary);
+  opacity: 0.85;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+[data-theme="light"] .tagline {
+  color: #333333;
+  opacity: 0.9;
+}
+
+/* Sección Links */
+.linksSection {
+  height: 100%;
+}
+
+.linksSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linksSection li {
+  margin-bottom: 0.8rem;
+}
+
+.linksSection a {
+  color: var(--text-primary);
+  opacity: 0.85;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+[data-theme="light"] .linksSection a {
+  color: #333333;
+  opacity: 0.9;
+}
+
+.linksSection a:hover {
+  color: var(--accent-primary);
+  opacity: 1;
+}
+
+/* Sección Contacto */
+.contactSection {
+  height: 100%;
+}
+
+.contactSection address {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.contactSection p {
+  color: var(--text-primary);
+  opacity: 0.85;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+[data-theme="light"] .contactSection p {
+  color: #333333;
+  opacity: 0.9;
+}
+
+/* Sección CTA */
+.ctaSection {
+  height: 100%;
+}
+
+.sectionTitle {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+[data-theme="light"] .sectionTitle {
+  color: #222222;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-primary);
+}
+
+.whatsappCta {
+  display: inline-block;
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .whatsappCta {
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.whatsappCta:hover {
+  background-color: var(--accent-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .whatsappCta:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Copyright */
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem 2rem;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .copyright {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.03);
+  color: #333333;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.legalLinks a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+[data-theme="light"] .legalLinks a {
+  color: #333333;
+}
+
+.legalLinks a:hover {
+  color: var(--accent-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .brandSection {
+    grid-column: 1 / -1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .taglineWrapper {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 0.75rem;
+    border-top: 2px solid var(--accent-primary);
+    max-width: 80%;
+    margin-top: 0;
+  }
+
+  .sectionTitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .sectionTitle::after {
+    left: 0;
+    transform: none;
+  }
+
+  .whatsappCta {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .legalLinks {
+    justify-content: center;
+  }
+}

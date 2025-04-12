@@ -1,0 +1,239 @@
+/* Estilos base - iguales al resto de tu sitio */
+.mainContainer {
+  background-color: var(--bg-secondary);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .mainContainer {
+  background-color: var(--bg-primary);
+}
+
+.backgroundElements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.gradientCircle1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -300px;
+  top: -300px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 180, 216, 0.15) 0%,
+    rgba(0, 180, 216, 0) 70%
+  );
+  border-radius: 50%;
+}
+
+[data-theme="light"] .gradientCircle1 {
+  background: radial-gradient(
+    circle,
+    rgba(0, 119, 182, 0.15) 0%,
+    rgba(0, 119, 182, 0) 70%
+  );
+}
+
+.gradientCircle2 {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+  background: radial-gradient(
+    circle,
+    rgba(144, 224, 239, 0.1) 0%,
+    rgba(144, 224, 239, 0) 70%
+  );
+  border-radius: 50%;
+}
+
+[data-theme="light"] .gradientCircle2 {
+  background: radial-gradient(
+    circle,
+    rgba(0, 150, 199, 0.1) 0%,
+    rgba(0, 150, 199, 0) 70%
+  );
+}
+
+.gridPattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+[data-theme="light"] .gridPattern {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 0 3rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: var(--accent-primary);
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  border-radius: 3px;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contenido de texto */
+.textSection {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  padding: 2rem 0;
+}
+
+.textContent {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .textContent {
+  background: rgba(245, 245, 245, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.textContent h2 {
+  color: var(--accent-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.textContent h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-primary);
+}
+
+.textContent h3 {
+  color: var(--accent-secondary);
+  font-size: 1.4rem;
+  margin: 2rem 0 1rem;
+}
+
+.textContent p {
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.textContent a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.textContent a:hover {
+  text-decoration: underline;
+}
+
+.emphasisBox {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border-left: 3px solid var(--accent-primary);
+  background: rgba(0, 180, 216, 0.05);
+}
+
+[data-theme="light"] .emphasisBox {
+  background: rgba(0, 119, 182, 0.05);
+}
+
+.emphasisBox p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    padding: 4rem 0 2rem;
+  }
+
+  .textContent {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+}
