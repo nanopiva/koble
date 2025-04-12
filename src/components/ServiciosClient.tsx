@@ -205,51 +205,52 @@ export default function ServiciosClient() {
       <section ref={principlesRef} className={styles.principlesSection}>
         <div className={styles.principlesHeader}>
           <h2 className={styles.sectionTitle}>Principios de Gestión</h2>
+          <p className={styles.sectionSubtitle}>
+            Nuestros pilares fundamentales
+          </p>
         </div>
 
-        <div className={styles.philosophyFlow}>
-          <div className={styles.philosophyItem}>
-            <div className={styles.philosophyCircle}>
-              <FaCheckCircle className={styles.philosophyIcon} />
-            </div>
-            <div className={styles.philosophyContent}>
+        <div className={styles.philosophyGrid}>
+          <div className={styles.philosophyCard}>
+            <div className={styles.cardHeader}>
+              <div className={styles.philosophyIconContainer}>
+                <FaCheckCircle className={styles.philosophyIcon} />
+              </div>
               <h3>Ningún cliente queda sin respuesta</h3>
-              <p>
-                Garantizamos seguimiento a cada interacción comercial. Sistemas
-                automatizados con alertas para asegurar que ninguna oportunidad
-                se pierda en el camino.
-              </p>
             </div>
-            <div className={styles.connectingLine}></div>
+            <p>
+              Garantizamos seguimiento a cada interacción comercial. Sistemas
+              automatizados con alertas para asegurar que ninguna oportunidad se
+              pierda en el camino.
+            </p>
           </div>
 
-          <div className={styles.philosophyItem}>
-            <div className={styles.philosophyCircle}>
-              <FaHistory className={styles.philosophyIcon} />
-            </div>
-            <div className={styles.philosophyContent}>
+          <div className={styles.philosophyCard}>
+            <div className={styles.cardHeader}>
+              <div className={styles.philosophyIconContainer}>
+                <FaHistory className={styles.philosophyIcon} />
+              </div>
               <h3>Conversaciones trazables</h3>
-              <p>
-                Historial completo de cada interacción, disponible en cualquier
-                etapa del proceso. Toda tu comunicación comercial centralizada y
-                accesible.
-              </p>
             </div>
-            <div className={styles.connectingLine}></div>
+            <p>
+              Historial completo de cada interacción, disponible en cualquier
+              etapa del proceso. Toda tu comunicación comercial centralizada y
+              accesible.
+            </p>
           </div>
 
-          <div className={styles.philosophyItem}>
-            <div className={styles.philosophyCircle}>
-              <FaChartLine className={styles.philosophyIcon} />
-            </div>
-            <div className={styles.philosophyContent}>
+          <div className={styles.philosophyCard}>
+            <div className={styles.cardHeader}>
+              <div className={styles.philosophyIconContainer}>
+                <FaChartLine className={styles.philosophyIcon} />
+              </div>
               <h3>Decisiones basadas en datos</h3>
-              <p>
-                Dejamos de lado las suposiciones. Nuestros dashboards te
-                muestran métricas claras para tomar decisiones estratégicas con
-                información concreta.
-              </p>
             </div>
+            <p>
+              Dejamos de lado las suposiciones. Nuestros dashboards te muestran
+              métricas claras para tomar decisiones estratégicas con información
+              concreta.
+            </p>
           </div>
         </div>
       </section>

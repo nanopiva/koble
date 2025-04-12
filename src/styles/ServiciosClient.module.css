@@ -230,7 +230,6 @@
 .sectionTitle {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   text-align: center;
-  margin-bottom: 1rem;
   color: var(--text-primary);
   position: relative;
 }
@@ -252,9 +251,10 @@
 
 .sectionSubtitle {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-secondary);
   margin-bottom: 3rem;
+  margin-top: 1rem;
 }
 
 .processSteps {
@@ -318,35 +318,28 @@
 .phaseContent h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: var(--accent-primary);
-}
-
-.phaseDetails {
-  list-style-type: none;
-  padding: 0;
-}
-
-.phaseDetails li {
-  margin-bottom: 0.8rem;
-  position: relative;
-  padding-left: 1.5rem;
   color: var(--text-primary);
 }
 
-.phaseDetails li::before {
-  content: "•";
-  color: var(--accent-primary);
-  position: absolute;
-  left: 0;
+.phaseDetails {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .connectorLine {
   position: absolute;
-  left: 20px;
-  top: 60px;
+  left: 19px;
+  top: 45px;
   bottom: -3rem;
   width: 2px;
-  background: linear-gradient(to bottom, var(--accent-primary), transparent);
+  background: linear-gradient(
+    to bottom,
+    var(--accent-primary),
+    transparent 80%
+  );
 }
 
 /* Ámbitos de Solución */
@@ -425,11 +418,11 @@
   margin-top: 1rem;
 }
 
-/* Principios de Gestión */
+/* PRINCIPIOS DE GESTIÓN - Versión optimizada */
 .principlesSection {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
   position: relative;
   z-index: 1;
   opacity: 0;
@@ -443,37 +436,50 @@
 }
 
 .principlesHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.principlesHeader .sectionTitle {
+  margin-bottom: 0.5rem;
+}
+
+.principlesHeader .sectionSubtitle {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.philosophyCard {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.philosophyCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.1);
+}
+
+.cardHeader {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 4rem;
-  position: relative;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.philosophyFlow {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.philosophyItem {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  position: relative;
-}
-
-.animatePrinciples .philosophyItem {
-  opacity: 0;
-  animation: fadeInRight 0.8s ease-out forwards;
-}
-
-.philosophyCircle {
-  width: 80px;
-  height: 80px;
+.philosophyIconContainer {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: linear-gradient(
     135deg,
@@ -484,53 +490,24 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  position: relative;
-  z-index: 2;
-}
-
-.philosophyCircle::after {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  border-radius: 50%;
-  background: rgba(0, 180, 216, 0.2);
-  z-index: -1;
 }
 
 .philosophyIcon {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: var(--bg-primary);
 }
 
-.philosophyContent {
-  background: rgba(30, 30, 30, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 1.5rem;
-  border: 1px solid var(--border-color);
-  flex: 1;
-}
-
-.philosophyContent h3 {
+.philosophyCard h3 {
   color: var(--accent-primary);
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
-.philosophyContent p {
+.philosophyCard p {
   color: var(--text-primary);
   line-height: 1.6;
-}
-
-.connectingLine {
-  position: absolute;
-  left: 40px;
-  top: 80px;
-  bottom: -3rem;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--accent-primary), transparent);
-  z-index: 1;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
 }
 
 /* CTA Section */
@@ -695,13 +672,13 @@
   box-shadow: 0 10px 25px rgba(0, 119, 182, 0.15);
 }
 
-[data-theme="light"] .philosophyCircle::after {
-  background: rgba(0, 119, 182, 0.2);
-}
-
-[data-theme="light"] .philosophyContent {
+[data-theme="light"] .philosophyCard {
   background: rgba(245, 245, 245, 0.6);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .philosophyCard:hover {
+  box-shadow: 0 10px 25px rgba(0, 119, 182, 0.15);
 }
 
 [data-theme="light"] .ctaButton {
@@ -721,11 +698,25 @@
 
   .processCard {
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .phaseIndicator {
+    margin-bottom: 1rem;
+  }
+
+  .phaseContent {
+    padding: 1.5rem;
+    width: 100%;
   }
 
   .connectorLine {
     display: none;
+  }
+
+  .phaseDetails {
+    text-align: left;
   }
 
   .solutionsGrid {
@@ -736,19 +727,23 @@
     padding: 0 1.5rem 4rem;
   }
 
-  .philosophyItem {
+  /* Ajustes específicos para Principios de Gestión en mobile */
+  .principlesSection {
+    padding: 2rem 1rem;
+  }
+
+  .philosophyCard {
+    padding: 1.25rem;
+  }
+
+  .cardHeader {
     flex-direction: column;
     text-align: center;
+    gap: 0.5rem;
   }
 
-  .philosophyCircle {
-    margin-bottom: 1rem;
-  }
-
-  .connectingLine {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 100px;
+  .philosophyIconContainer {
+    margin-bottom: 0.5rem;
   }
 
   .animateCustomSolution .featureItem:nth-child(1) {
@@ -781,13 +776,30 @@
     animation-delay: 0.6s;
   }
 
-  .animatePrinciples .philosophyItem:nth-child(1) {
+  .animatePrinciples .philosophyCard:nth-child(1) {
     animation-delay: 0.2s;
   }
-  .animatePrinciples .philosophyItem:nth-child(2) {
+  .animatePrinciples .philosophyCard:nth-child(2) {
     animation-delay: 0.4s;
   }
-  .animatePrinciples .philosophyItem:nth-child(3) {
+  .animatePrinciples .philosophyCard:nth-child(3) {
     animation-delay: 0.6s;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .philosophyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 901px) {
+  .philosophyGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .principlesSection {
+    padding: 4rem 2rem;
   }
 }
