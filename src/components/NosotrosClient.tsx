@@ -78,7 +78,8 @@ export default function NosotrosClient() {
                 alt="Giovanni Rostagno"
                 width={240}
                 height={240}
-                className={styles.founderImage}
+                className={`${styles.founderImage} ${styles.portrait}`} // Añadida clase portrait
+                priority
               />
               <div className={styles.imageDeco}></div>
             </div>
@@ -110,7 +111,8 @@ export default function NosotrosClient() {
                 alt="Athina Ingaramo"
                 width={240}
                 height={240}
-                className={styles.founderImage}
+                className={`${styles.founderImage} ${styles.portrait}`} // Añadida clase portrait
+                priority
               />
               <div className={styles.imageDeco}></div>
             </div>
