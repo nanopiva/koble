@@ -139,7 +139,7 @@ export default function HomeClient() {
             <h3>Optimización del tiempo</h3>
             <p>
               Automatizaciones inteligentes que eliminan tareas repetitivas y
-              liberan tu equipo para lo importante
+              liberan tu equipo para lo importante.
             </p>
           </div>
 
