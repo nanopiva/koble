@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Expertos en asesoramiento empresarial. Soluciones integrales para tu negocio.",
   keywords: ["asesoría", "empresas", "consultoría", "negocios"],
-  metadataBase: new URL("https://www.tudominio.com"),
+  metadataBase: new URL("https://www.koble.com.ar"),
   alternates: {
     canonical: "/",
   },

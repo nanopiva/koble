@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Servicios",
   description:
     "CRM personalizados y automatización inteligente para optimizar tu operación comercial. Soluciones hechas a la medida de tu negocio.",
-  metadataBase: new URL("https://www.koble.com.ar"), // Usa tu dominio real
+  metadataBase: new URL("https://www.koble.com.ar"),
   alternates: {
     canonical: "/servicios",
   },

@@ -35,7 +35,8 @@
 .brandSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   margin-right: 2rem;
 }
 
@@ -81,6 +82,12 @@
   color: #333333;
   opacity: 0.9;
 }
+.linksSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .linksSection ul {
   list-style: none;
@@ -110,6 +117,12 @@
   opacity: 1;
 }
 
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .contactSection address {
   font-style: normal;
   margin: 0;
@@ -135,7 +148,8 @@
   font-weight: 600;
   margin-bottom: 1.25rem;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
 }
 
 [data-theme="light"] .sectionTitle {
@@ -146,10 +160,19 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
   background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .whatsappCta {
@@ -203,6 +226,7 @@
 .legalLinks {
   display: flex;
   gap: 1.25rem;
+  align-items: center;
 }
 
 .legalLinks a {
@@ -221,6 +245,9 @@
 
 /* Tablet */
 @media (max-width: 976px) {
+  .brandSection {
+    margin-right: 0;
+  }
   .ctaSection {
     display: none;
   }
@@ -255,6 +282,13 @@
   .whatsappCta {
     padding: 0.5rem 1rem;
   }
+  .legalLinks {
+    margin-top: 0.3rem;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Mobile */
@@ -277,8 +311,6 @@
 
   .sectionTitle::after {
     margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .copyright {

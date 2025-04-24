@@ -39,10 +39,10 @@ const WorldMap = () => {
           className={styles.pulse}
         />
         <text
-          x="280"
-          y="480"
+          x="270"
+          y="500"
           fill="#00b4d8"
-          fontSize="14"
+          fontSize="25"
           fontFamily="Arial"
           fontWeight="bold"
         >

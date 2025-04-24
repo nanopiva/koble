@@ -49,7 +49,7 @@ export default function Footer() {
         <div className={styles.contactSection}>
           <h3 className={styles.sectionTitle}>Contacto</h3>
           <address>
-            <p>giovarosta14@gmail.com</p>
+            <p>contacto@koble.com.ar</p>
             <p>+54 9 342 423-3751</p>
           </address>
         </div>
@@ -73,6 +73,31 @@ export default function Footer() {
           © {new Date().getFullYear()} Koble. Todos los derechos reservados.
         </p>
         <div className={styles.legalLinks}>
+          <Link
+            href="https://www.linkedin.com/company/koble-ar" // <-- tu URL de LinkedIn real
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className={styles.socialLink}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              className={styles.linkedinIcon}
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.761
+        0 5-2.238 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966
+        0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785
+        1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.869
+        0-2.155 1.46-2.155 2.966v5.701h-3v-10h2.881v1.367h.041c.401-.761
+        1.381-1.561 2.841-1.561 3.037 0 3.6 2.001 3.6 4.604v5.59z"
+              />
+            </svg>
+          </Link>
           <Link href="/privacidad">Privacidad</Link>
           <Link href="/aviso-legal">Aviso legal</Link>
         </div>

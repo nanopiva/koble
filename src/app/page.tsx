@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   title: "Koble - Transformación Digital para Empresas",
   description:
     "Soluciones tecnológicas personalizadas que optimizan procesos, aumentan ventas y mejoran la toma de decisiones",
-  metadataBase: new URL("https://www.koble.com.ar"), // Reemplaza con tu dominio
+  metadataBase: new URL("https://www.koble.com.ar"),
   alternates: {
-    canonical: "/", // URL canónica para la home
+    canonical: "/",
   },
   openGraph: {
     title: "Koble - Tecnología con Propósito Empresarial",

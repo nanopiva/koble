@@ -359,10 +359,10 @@ export default function ContactoClient() {
               tabIndex={0}
               role="button"
               aria-label="Enviar correo electrónico"
-              onClick={() => handleCopy("email", "giovarosta14@gmail.com")}
+              onClick={() => handleCopy("email", "contacto@koble.com.ar")}
               onKeyDown={(e) =>
                 e.key === "Enter" &&
-                handleCopy("email", "giovarosta14@gmail.com")
+                handleCopy("email", "contacto@koble.com.ar")
               }
             >
               <div className={styles.cardHeader}>
@@ -376,7 +376,7 @@ export default function ContactoClient() {
                 <div className={styles.contactInfo}>
                   <span className={styles.infoLabel}>Email:</span>
                   <span className={styles.infoValue}>
-                    giovarosta14@gmail.com
+                    contacto@koble.com.ar
                   </span>
                   <div className={styles.copyFeedback}>
                     Haz click para copiar
@@ -387,7 +387,7 @@ export default function ContactoClient() {
                   className={styles.actionButton}
                   onClick={(e) => {
                     e.stopPropagation();
-                    window.open("mailto:giovarosta14@gmail.com", "_blank");
+                    window.open("mailto:contacto@koble.com.ar", "_blank");
                   }}
                   aria-label="Enviar email"
                 >

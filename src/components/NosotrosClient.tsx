@@ -55,10 +55,8 @@ export default function NosotrosClient() {
       {/* Hero Section - Más compacto */}
       <section className={styles.hero}>
         <h1 className={styles.heroTitle}>
-          <span className={styles.titleLine1}>Conoce al equipo detrás de</span>
-          <span className={styles.titleLine2}>
-            <span className={styles.highlight}>Koble</span>
-          </span>
+          Conoce al equipo detrás de{" "}
+          <span className={styles.highlight}>Koble</span>
         </h1>
         <p className={styles.heroSubtitle}>
           Nos gusta escuchar, entender y acompañar cada proceso.

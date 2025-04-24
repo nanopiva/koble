@@ -779,6 +779,9 @@
     padding: 6rem 1.5rem 3rem;
   }
 
+  .highlight::after {
+    display: none;
+  }
   .formRow {
     flex-direction: column;
     gap: 1.5rem;

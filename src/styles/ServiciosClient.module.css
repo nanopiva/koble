@@ -71,18 +71,18 @@
   line-height: 1.2;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+  max-width: 800px; /* límite de ancho para evitar pirámides */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.titleLine1 {
-  margin-bottom: 0.5rem;
-}
-
+.titleLine1,
 .titleLine2 {
-  display: inline-block;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-wrap: balance; /* opcional, mejora el quiebre de líneas si el navegador lo soporta */
 }
-
 .highlight {
   color: var(--accent-primary);
   background: linear-gradient(

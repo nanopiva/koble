@@ -183,65 +183,7 @@ export default function HomeClient() {
         </div>
 
         <div className={styles.comparisonContainer}>
-          {/* Columna izquierda - Enfoque tradicional */}
-          <div
-            className={`${styles.comparisonColumn} ${styles.traditionalColumn}`}
-          >
-            <div className={styles.columnHeader}>
-              <div className={styles.columnBadge}>
-                <X className={styles.badgeIcon} size={16} />
-                <span>Enfoque tradicional</span>
-              </div>
-              <h3 className={styles.columnTitle}>Software sin estrategia</h3>
-              <p className={styles.columnSubtitle}>Resultados limitados</p>
-            </div>
-
-            <div className={styles.featureList}>
-              <div className={styles.featureItem}>
-                <div className={styles.featureIcon}>
-                  <X className={styles.xIcon} size={20} />
-                </div>
-                <div className={styles.featureContent}>
-                  <h4>Plantillas rígidas</h4>
-                  <p>
-                    Fijan una única forma de operar, sin considerar cómo
-                    evoluciona tu negocio.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.featureItem}>
-                <div className={styles.featureIcon}>
-                  <X className={styles.xIcon} size={20} />
-                </div>
-                <div className={styles.featureContent}>
-                  <h4>Automatizaciones ciegas</h4>
-                  <p>Flujos estándar que ignoran tus procesos únicos.</p>
-                </div>
-              </div>
-
-              <div className={styles.featureItem}>
-                <div className={styles.featureIcon}>
-                  <X className={styles.xIcon} size={20} />
-                </div>
-                <div className={styles.featureContent}>
-                  <h4>Datos sin contexto</h4>
-                  <p>Métricas que no responden a tus objetivos reales.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Separador central */}
-          <div className={styles.comparisonDivider}>
-            <div className={styles.dividerLine}></div>
-            <div className={styles.dividerCircle}>
-              <span>VS</span>
-            </div>
-            <div className={styles.dividerLine}></div>
-          </div>
-
-          {/* Columna derecha - Nuestro enfoque */}
+          {/* Columna izquierda - Nuestro enfoque */}
           <div
             className={`${styles.comparisonColumn} ${styles.ourApproachColumn}`}
           >
@@ -298,6 +240,64 @@ export default function HomeClient() {
               <div className={styles.keyBenefit}>
                 <div className={styles.keyBenefitIcon}>✨</div>
                 <p>Tu operación comercial dicta la tecnología</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Separador central */}
+          <div className={styles.comparisonDivider}>
+            <div className={styles.dividerLine}></div>
+            <div className={styles.dividerCircle}>
+              <span>VS</span>
+            </div>
+            <div className={styles.dividerLine}></div>
+          </div>
+
+          {/* Columna derecha - Enfoque tradicional */}
+          <div
+            className={`${styles.comparisonColumn} ${styles.traditionalColumn}`}
+          >
+            <div className={styles.columnHeader}>
+              <div className={styles.columnBadge}>
+                <X className={styles.badgeIcon} size={16} />
+                <span>Enfoque tradicional</span>
+              </div>
+              <h3 className={styles.columnTitle}>Software sin estrategia</h3>
+              <p className={styles.columnSubtitle}>Resultados limitados</p>
+            </div>
+
+            <div className={styles.featureList}>
+              <div className={styles.featureItem}>
+                <div className={styles.featureIcon}>
+                  <X className={styles.xIcon} size={20} />
+                </div>
+                <div className={styles.featureContent}>
+                  <h4>Plantillas rígidas</h4>
+                  <p>
+                    Fijan una única forma de operar, sin considerar cómo
+                    evoluciona tu negocio.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.featureItem}>
+                <div className={styles.featureIcon}>
+                  <X className={styles.xIcon} size={20} />
+                </div>
+                <div className={styles.featureContent}>
+                  <h4>Automatizaciones ciegas</h4>
+                  <p>Flujos estándar que ignoran tus procesos únicos.</p>
+                </div>
+              </div>
+
+              <div className={styles.featureItem}>
+                <div className={styles.featureIcon}>
+                  <X className={styles.xIcon} size={20} />
+                </div>
+                <div className={styles.featureContent}>
+                  <h4>Datos sin contexto</h4>
+                  <p>Métricas que no responden a tus objetivos reales.</p>
+                </div>
               </div>
             </div>
           </div>

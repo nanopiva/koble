@@ -39,8 +39,8 @@
 }
 
 .connection {
-  stroke-dasharray: 6 3;
-  animation: dash 5s linear infinite;
+  stroke-dasharray: 9 10;
+  animation: dash 8s linear infinite;
   marker-end: url(#arrow);
   fill: none;
   filter: none; /* Eliminamos cualquier sombra */
@@ -48,15 +48,15 @@
 
 /* Diferentes velocidades para cada flecha */
 .connection:nth-child(odd) {
-  animation: dash 7s linear infinite;
+  animation: dash 9s linear infinite;
 }
 
 .connection:nth-child(3n) {
-  animation: dash 6s linear infinite;
+  animation: dash 7s linear infinite;
 }
 
 .connection:nth-child(4n) {
-  animation: dash 8s linear infinite;
+  animation: dash 10s linear infinite;
 }
 
 @keyframes dash {

@@ -90,20 +90,14 @@
 .heroTitle {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.2;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.titleLine1 {
-  margin-bottom: 0.5rem;
-  opacity: 0.9;
-}
-
-.titleLine2 {
-  display: inline-block;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: pretty; /* opcional, mantiene buena estética */
 }
 
 .highlight {
@@ -288,6 +282,10 @@
 .founderBio p {
   font-weight: 300;
   font-size: 1.05rem;
+  text-align: justify;
+  hyphens: auto;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 /* Historia Section */
@@ -617,6 +615,10 @@
 }
 
 @media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
   .container {
     padding: 4rem 1.5rem;
   }
@@ -628,6 +630,10 @@
   .founderCard {
     flex-direction: column;
     text-align: center;
+  }
+  .founderBio p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
   }
 
   .cardRight {
