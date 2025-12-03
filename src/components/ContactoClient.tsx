@@ -138,7 +138,7 @@ export default function ContactoClient() {
       ...prev,
       [id]: value,
     }));
-    // Clear error when typing
+    // Sacar error tipeando
     if (errors[id]) {
       setErrors((prev) => {
         const newErrors = { ...prev };
